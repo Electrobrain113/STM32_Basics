@@ -1,0 +1,13 @@
+Microcontroller:STM32F401RE 
+Peripheral port: Port A
+Peripheral Pin: A5//User Led
+Peripheral MODE: GP output mode
+
+
+Memory addresses of registers used.
+
+0x4002 3800 + 0x30=> 0x40023830 --RCC_AHB1ENR---BIT 0(1) //Set bit 0
+
+0x4002 0000=>0x40020000  --GPIOA_MODER---BIT 11,10(01)//Reset bit 11 and set bit 10
+
+0x4002 0000 + 0x14=> 0x40020014 --GPIOA_ODR---BIT 5(1)//Set bit 5
